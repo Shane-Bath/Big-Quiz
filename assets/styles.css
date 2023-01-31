@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(67, 240, 14);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.next {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+
+}
+
+#btn-btn {
+    padding: 20px;
+    background-color: blueviolet;
+}
