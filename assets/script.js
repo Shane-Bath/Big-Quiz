@@ -25,12 +25,9 @@ element();
 function gamearea() {
     const board = document.createElement('div');
     board.setAttribute('id', 'main-game')
-    if (board.style.display === 'none'){
-        board.style.display = 'block';
-    } else {
     board.innerHTML= 'this is what to you see if you click the button';
     document.body.appendChild(board)
-    }
+
 }
 
 gamearea();
