@@ -42,6 +42,16 @@ function runGame() {}
 //Display questions and an answer in gamearea, w3school- how to display JS objects
 
 document.getElementById("question").innerHTML = setQuestions[0].question;
+document.getElementById("option-1").innerHTML = setQuestions[0].answers[1];
+document.getElementById("option-2").innerHTML = setQuestions[0].answers[2];
+document.getElementById("option-3").innerHTML = setQuestions[0].answers[3];
+document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
+
+/* ?? How to add the question from the object array, after the question has been answered
+   how to confirm the correct answer?
+   how to randomize the choices and? 
+
+   create a function that setQuetion number [?] and the answers */
  
 
 
