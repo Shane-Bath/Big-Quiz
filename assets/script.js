@@ -57,14 +57,19 @@ document.getElementById("start").addEventListener(
 
 //console.log(setQuestions)
 
+ //Math Random to choose question - 
+ //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
+ const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
+ console.log(randomQuestion);
 
 //Display questions and an answer in gamearea, w3school- how to display JS objects
+//Use randomQuestion value to select question
 
-document.getElementById("question").innerHTML = setQuestions[0].question;
-document.getElementById("option-1").innerHTML = setQuestions[0].answers[1];
-document.getElementById("option-2").innerHTML = setQuestions[0].answers[2];
-document.getElementById("option-3").innerHTML = setQuestions[0].answers[3];
-document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
+document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
+document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].answers[1];
+document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].answers[2];
+document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].answers[3];
+document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].answers[4];
 
 
 
@@ -78,8 +83,8 @@ document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
    Use math random to select question? 
 */
 
-const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
-console.log(randomQuestion);
+
+
 // function getQuestion(setQuestions) {
 //     const result = object.keys(setQuestions);
 //     return result[Math.floor(math.random() * result.length)];
