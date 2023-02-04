@@ -1,6 +1,40 @@
+// A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
+    let setQuestions = [
+        {
+            question: "What is a group of crows called ?",
+            answers: {
+                1: "Flock",
+                2: "Murder",
+                3: "Swarm",
+                4: "Firm",
+            },
+            correctAnswer:"2",
+         },
+         {
+            question: "How many dots appear on pair of dice?",
+            answers: {
+                1: "42",
+                2: "37",
+                3: "46",
+                4: "40",
+            },
+            correctAnswer:"1",
+         },
+         {
+            question: "Which is the only body part that is fully grown from birth?",
+            answers: {
+                1: "Nose",
+                2: "Ears",
+                3: "Eyes",
+                4: "Elbow",
+            },
+            correctAnswer:"2",
+         },
+
+    ]
 
 
-
+console.log(setQuestions)
 
 /*const game = document.getElementById('game');
 const gamebtn = document.getElementById('btn');
