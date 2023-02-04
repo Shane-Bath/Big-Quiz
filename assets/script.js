@@ -1,4 +1,6 @@
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
+
+    
     let setQuestions = [
         {
             question: "What is a group of crows called ?",
@@ -32,9 +34,23 @@
          },
 
     ]
-
+  
 
 console.log(setQuestions)
+function runGame() {}
+
+//Display questions and an answer in gamearea, w3school- how to display JS objects
+
+document.getElementById("question").innerHTML = setQuestions[0].question;
+ 
+
+
+
+
+
+
+
+
 
 /*const game = document.getElementById('game');
 const gamebtn = document.getElementById('btn');
