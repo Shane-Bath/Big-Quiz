@@ -27,3 +27,14 @@ li {
     margin: 3px;
     text-align: center;
 }
+
+button {
+
+    padding: 15px;
+    background-color: #F55050;
+    border-radius: 10px;
+    position: relative;
+    left: 30%;
+    border: none;
+    font-weight: 800;
+}
