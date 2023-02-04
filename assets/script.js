@@ -55,19 +55,37 @@ document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
 
    create a function that setQuetion number [?] and the answers 
    addlistener event 
-   Start game button */
+   Start game button 
 
-   // start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
+   start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
+   https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
+   https://www.w3schools.com/jsref/prop_style_display.asp
 
-   document.getElementById("start").addEventListener(
-    "click",
-   () => {
-    //document.getElementById("game-area").none =true;
-    document.getElementById("game-area").none =false;
-   },
-   false
+   */
    
-   );
+   function display () {
+    const stateOne = document.getElementById("game-area");
+    if (stateOne.style.display === "none") {
+        stateOne.style.display = "block";
+    }else {
+        stateOne.style.display = "none"
+    }
+            
+}
+display();
+//    document.getElementById("start").onclick = function() {
+//     document.getElementById("game-area").object.display = "game-area";
+//    }
+
+//    document.getElementById("start").addEventListener(
+//     "click",
+//    () => {
+//     document.getElementById("game-area").style.display
+    
+//    },
+//    false
+   
+//    );
  
 
 
