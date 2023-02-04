@@ -63,29 +63,23 @@ document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
 
    */
    
-   function display () {
-    const stateOne = document.getElementById("game-area");
-    if (stateOne.style.display === "none") {
-        stateOne.style.display = "block";
-    }else {
-        stateOne.style.display = "none"
-    }
-            
-}
-display();
-//    document.getElementById("start").onclick = function() {
-//     document.getElementById("game-area").object.display = "game-area";
-//    }
-
-//    document.getElementById("start").addEventListener(
-//     "click",
-//    () => {
-//     document.getElementById("game-area").style.display
-    
-//    },
-//    false
+   document.getElementById("start").addEventListener(
+    "click",
+   () => {
+    document.getElementById("game-area").style.display = "flex"
+    document.getElementById("game-area").style.display === "flex"
+    document.getElementById("start").style.display = "none"
+   },
+   false
    
-//    );
+   );
+
+   // changing from arrow function to traditional function
+ 
+   function display () { 
+    
+
+   }
  
 
 
