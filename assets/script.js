@@ -76,13 +76,11 @@ document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].ans
 document.getElementsByClassName('answer').addEventListener (
     "click",
 
-    () => {
-        const correct = onclick === setQuestions.correctAnswer;
+    function checkAnswer () {
         
 
-        })
-
-    
+    }
+)
 
 console.log(correct);
 
