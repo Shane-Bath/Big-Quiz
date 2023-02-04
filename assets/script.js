@@ -1,3 +1,22 @@
+/*Start the game 
+start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
+   https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
+   https://www.w3schools.com/jsref/prop_style_display.asp
+   */
+
+document.getElementById("start").addEventListener(
+    "click",
+   () => {
+    document.getElementById("game-area").style.display = "flex"
+    document.getElementById("game-area").style.display === "flex"
+    document.getElementById("start").style.display = "none"
+   },
+   false
+);
+
+
+
+ 
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
 
     
@@ -36,8 +55,8 @@
     ]
   
 
-console.log(setQuestions)
-function runGame() {}
+//console.log(setQuestions)
+
 
 //Display questions and an answer in gamearea, w3school- how to display JS objects
 
@@ -56,31 +75,20 @@ document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
    create a function that setQuetion number [?] and the answers 
    addlistener event 
    Start game button 
+   Use math random to select question? 
+*/
 
-   start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
-   https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
-   https://www.w3schools.com/jsref/prop_style_display.asp
+const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
+console.log(randomQuestion);
+// function getQuestion(setQuestions) {
+//     const result = object.keys(setQuestions);
+//     return result[Math.floor(math.random() * result.length)];
 
-   */
-   
-   document.getElementById("start").addEventListener(
-    "click",
-   () => {
-    document.getElementById("game-area").style.display = "flex"
-    document.getElementById("game-area").style.display === "flex"
-    document.getElementById("start").style.display = "none"
-   },
-   false
-   
-   );
+// }
 
-   // changing from arrow function to traditional function
- 
-   function display () { 
+// console.log(object.keys(setQuestions));
     
 
-   }
- 
 
 
 
