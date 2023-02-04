@@ -60,17 +60,31 @@ document.getElementById("start").addEventListener(
  //Math Random to choose question - 
  //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
  const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
- console.log(randomQuestion);
+ //console.log(randomQuestion);
 
 //Display questions and an answer in gamearea, w3school- how to display JS objects
 //Use randomQuestion value to select question
 
-document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
+let mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
 document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].answers[1];
 document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].answers[2];
 document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].answers[3];
 document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].answers[4];
 
+//how to get the correct answer ? eventlistener 
+
+document.getElementsByClassName('answer').addEventListener (
+    "click",
+
+    () => {
+        const correct = onclick === setQuestions.correctAnswer;
+        
+
+        })
+
+    
+
+console.log(correct);
 
 
 /* ?? How to add the question from the object array, after the question has been answered
