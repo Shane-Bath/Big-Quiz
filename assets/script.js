@@ -1,4 +1,8 @@
-const game = document.getElementById('game');
+
+
+
+
+/*const game = document.getElementById('game');
 const gamebtn = document.getElementById('btn');
 const  category = [9, 10, 11];
 
@@ -57,7 +61,7 @@ function gamearea() {
 
 }
 
-gamearea();
+gamearea(); */
 
 
 
