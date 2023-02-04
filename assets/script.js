@@ -56,6 +56,18 @@ document.getElementById("option-4").innerHTML = setQuestions[0].answers[4];
    create a function that setQuetion number [?] and the answers 
    addlistener event 
    Start game button */
+
+   // start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
+
+   document.getElementById("start").addEventListener(
+    "click",
+   () => {
+    //document.getElementById("game-area").none =true;
+    document.getElementById("game-area").none =false;
+   },
+   false
+   
+   );
  
 
 
