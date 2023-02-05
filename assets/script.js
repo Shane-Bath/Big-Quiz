@@ -73,17 +73,30 @@ document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].ans
 
 //how to get the correct answer ? eventlistener 
 
-document.getElementsByClassName('answer').addEventListener (
-    "click",
+
 
     function checkAnswer () {
-        
+       let check = document.getElementsByClassName('answer').addEventListener ("click", correctBtn)
+        //When click on an answer, check if it matches correct answer
+       if (check === setQuestions.correctAnswer) {
+        correctBtn.innerHTML = "Correct!";
+        }
 
-    }
-)
+}
+    // getElementsbyclassname returns an array ? 
 
-console.log(correct);
 
+
+   
+console.log();
+checkAnswer ()
+
+//Score board
+let score = 0;
+
+// An event to tell you that you have the correct answer
+let correctBtn = document.createElement('button');
+correctBtn.innerHTML = "You are correct";
 
 /* ?? How to add the question from the object array, after the question has been answered
    how to confirm the correct answer?
