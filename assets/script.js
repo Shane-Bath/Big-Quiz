@@ -1,21 +1,40 @@
+
 /*Start the game 
 start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
    https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
    https://www.w3schools.com/jsref/prop_style_display.asp
    */
 
+   let mainQuestion = document.getElementById("question");
+   let option1 = document.getElementById("option-1");
+   let option2 = document.getElementById("option-2");
+   let option3 = document.getElementById("option-3");
+   let option4 = document.getElementById("option-4");
+   //let randomQuestion; // generate a random number to select question from the array
+   let finalAnswer = document.getElementById("display-answer");
+
 document.getElementById("start").addEventListener(
     "click",
    () => {
     document.getElementById("game-area").style.display = "flex"
-    //document.getElementById("game-area").style.display === "flex"
     document.getElementById("start").style.display = "none"
+    
    },
    false
 );
 
+
+
+
+//https://stackoverflow.com/questions/19030742/difference-between-innertext-innerhtml-and-value 
+// select question 
+
+ 
+
+
+
 //Score board
-let score = 0;
+//let score = 0;
 
 // An event to tell you that you have the correct answer
 
@@ -24,55 +43,53 @@ let score = 0;
  
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
 
-    
-    let setQuestions = [
+const setQuestions = [
         {
             question: "What is a group of crows called ?",
-            option1: "Flock",
-            option2: "Murder",
-            option3: "Swarm",
-            option4: "Firm",
-        
-            correctAnswer:"Murder",
+            answers: [
+                {text: "Flock", correct: false},
+                {text: "Murder", correct: true},
+                {text: "Swarm" , correct: false},
+                {text: "Firm", correct: false},
+            ]
          },
          {
             question: "How many dots appear on pair of dice?", 
-            option1: "42",
-            option2: "37",
-            option3: "46",
-            option4:  "40",
-               
-            correctAnswer:"42",
+            answers: [
+                {text: "42", correct: true},
+                {text: "40", correct: false},
+                {text: "44", correct: false},
+                {text: "38", correct: false},
+            ]
          },
          {
             question: "Which is the only body part that is fully grown from birth?",
-            option1: "Nose",
-            option2: "Ears",
-            option3: "Eyes",
-            option4: "Elbow",
-            
-            correctAnswer:"Eyes",
-         },
-
-    ]
-  
-
-//console.log(setQuestions)
-
+            answers: [
+                {text: "Nose", correct: false},
+                {text: "Ears", correct: false},
+                {text: "Eyes", correct: true},
+                {text: "Elbow", correct: false},
+            ]
+         }
+];
 
  //Math Random to choose question - 
  //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
- const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
+const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
  //console.log(randomQuestion);
-
+ mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
+ option1 = document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].answers[0].text;
+ option2 = document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].answers[1].text;
+ option3 = document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].answers[2].text;
+ option4 = document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].answers[3].text;
 //Display questions and an answer in gamearea, w3school- how to display JS objects
 //Use randomQuestion value to select question
 
-let mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
-document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].option1;
-document.getElementById("option-2").innerHTML= setQuestions[randomQuestion].option2;
-document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].option3;
-document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].option4;
+//mainQuestion = document.getElementById("question").innerHTML = setQuestions[0].question;
+// document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].option1;
+// document.getElementById("option-2").innerHTML= setQuestions[randomQuestion].option2;
+// document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].option3;
+// document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].option4;
 
 //https://www.w3schools.com/jsref/prop_pushbutton_value.asp  I have changed from list itemn
 
@@ -80,19 +97,19 @@ document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].opt
 //how to get the correct answer ? eventlistener 
 // getElementsbyclassname returns an array ? 
 //question
-let getCorrectAnswer = setQuestions[randomQuestion].correctAnswer;
-console.log(mainQuestion);
-console.log(getCorrectAnswer);
+// let getCorrectAnswer = setQuestions[randomQuestion].correctAnswer;
+// console.log(mainQuestion);
+// console.log(getCorrectAnswer);
 
 
-document.querySelector(".btn").addEventListener("click", displayAnswer)
+// document.querySelector(".btn").addEventListener("click", displayAnswer)
 
-function displayAnswer () {
-    document.getElementById("display-answer").innerHTML = getCorrectAnswer;
-}
+// function displayAnswer () {
+//     document.getElementById("display-answer").innerHTML = getCorrectAnswer;
+// }
  
         
-   displayAnswer();
+//    displayAnswer();
 
 
 
