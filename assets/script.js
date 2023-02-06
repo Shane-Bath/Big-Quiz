@@ -46,43 +46,45 @@ document.getElementById("start").addEventListener(
 const setQuestions = [
         {
             question: "What is a group of crows called ?",
-            answers: [
-                {text: "Flock", correct: false},
-                {text: "Murder", correct: true},
-                {text: "Swarm" , correct: false},
-                {text: "Firm", correct: false},
-            ]
-         },
+            option1: "flock",
+            option2: "Murder",
+            option3: "Swarm",
+            option4: "Firm",
+            answer: 2,
+        },
          {
             question: "How many dots appear on pair of dice?", 
-            answers: [
-                {text: "42", correct: true},
-                {text: "40", correct: false},
-                {text: "44", correct: false},
-                {text: "38", correct: false},
-            ]
+            option1: "42",
+            option2: "40",
+            option3: "44",
+            option4: "38",
+            answer: 1,
          },
          {
             question: "Which is the only body part that is fully grown from birth?",
-            answers: [
-                {text: "Nose", correct: false},
-                {text: "Ears", correct: false},
-                {text: "Eyes", correct: true},
-                {text: "Elbow", correct: false},
-            ]
-         }
+            option1: "Nose",
+            option2: "Ears",
+            option3: "Eyes",
+            option4: "Elbow",
+            answer: 3,
+         },
 ];
 
  //Math Random to choose question - 
  //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
-const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
+// const randomQuestion = (Object.keys(setQuestions)[Math.floor(Math.random()* Object.keys(setQuestions).length)]);
  //console.log(randomQuestion);
- mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
- option1 = document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].answers[0].text;
- option2 = document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].answers[1].text;
- option3 = document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].answers[2].text;
- option4 = document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].answers[3].text;
-//Display questions and an answer in gamearea, w3school- how to display JS objects
+//  mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
+//  option1 = document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].answers[0].text;
+//  option2 = document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].answers[1].text;
+//  option3 = document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].answers[2].text;
+//  option4 = document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].answers[3].text;
+
+
+
+
+
+ //Display questions and an answer in gamearea, w3school- how to display JS object
 //Use randomQuestion value to select question
 
 //mainQuestion = document.getElementById("question").innerHTML = setQuestions[0].question;
