@@ -8,7 +8,7 @@ document.getElementById("start").addEventListener(
     "click",
    () => {
     document.getElementById("game-area").style.display = "flex"
-    document.getElementById("game-area").style.display === "flex"
+    //document.getElementById("game-area").style.display === "flex"
     document.getElementById("start").style.display = "none"
    },
    false
@@ -18,8 +18,6 @@ document.getElementById("start").addEventListener(
 let score = 0;
 
 // An event to tell you that you have the correct answer
-let correctBtn = document.createElement('button');
-correctBtn.innerHTML = "You are correct";
 
 // store the correct answer 
 
@@ -72,9 +70,12 @@ correctBtn.innerHTML = "You are correct";
 
 let mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
 document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].option1;
-document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].option2;
+document.getElementById("option-2").innerHTML= setQuestions[randomQuestion].option2;
 document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].option3;
 document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].option4;
+
+//https://www.w3schools.com/jsref/prop_pushbutton_value.asp  I have changed from list itemn
+
 
 //how to get the correct answer ? eventlistener 
 // getElementsbyclassname returns an array ? 
@@ -83,9 +84,29 @@ let getCorrectAnswer = setQuestions[randomQuestion].correctAnswer;
 console.log(mainQuestion);
 console.log(getCorrectAnswer);
 
-function displayAnswer () {
-    
+
+document.querySelector('answer').addEventListener ("mousedown",
+() => {
+    let 
 }
+)
+
+
+
+// // click on button if the choice matches the getCorrectAnswer change color
+// document.querySelector("button").addEventListener ('click',
+// () => {
+//     //if you click and the content of the button matches getCorrectAnswer 
+//     // answer will be an array ? https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
+//     let correctBtn = document.querySelectorAll('answer');
+//     correctBtn === getCorrectAnswer;
+//     //change color
+//     correctBtn.style.display = 'none';
+
+// },
+// false
+
+// )
 
 
 
