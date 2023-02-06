@@ -14,7 +14,14 @@ document.getElementById("start").addEventListener(
    false
 );
 
+//Score board
+let score = 0;
 
+// An event to tell you that you have the correct answer
+let correctBtn = document.createElement('button');
+correctBtn.innerHTML = "You are correct";
+
+// store the correct answer 
 
  
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
@@ -23,39 +30,37 @@ document.getElementById("start").addEventListener(
     let setQuestions = [
         {
             question: "What is a group of crows called ?",
-            answers: {
-                1: "Flock",
-                2: "Murder",
-                3: "Swarm",
-                4: "Firm",
-            },
-            correctAnswer:"2",
+            option1: "Flock",
+            option2: "Murder",
+            option3: "Swarm",
+            option4: "Firm",
+        
+            correctAnswer:"Murder",
          },
          {
-            question: "How many dots appear on pair of dice?",
-            answers: {
-                1: "42",
-                2: "37",
-                3: "46",
-                4: "40",
-            },
-            correctAnswer:"1",
+            question: "How many dots appear on pair of dice?", 
+            option1: "42",
+            option2: "37",
+            option3: "46",
+            option4:  "40",
+               
+            correctAnswer:"42",
          },
          {
             question: "Which is the only body part that is fully grown from birth?",
-            answers: {
-                1: "Nose",
-                2: "Ears",
-                3: "Eyes",
-                4: "Elbow",
-            },
-            correctAnswer:"2",
+            option1: "Nose",
+            option2: "Ears",
+            option3: "Eyes",
+            option4: "Elbow",
+            
+            correctAnswer:"Eyes",
          },
 
     ]
   
 
 //console.log(setQuestions)
+
 
  //Math Random to choose question - 
  //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
@@ -66,33 +71,28 @@ document.getElementById("start").addEventListener(
 //Use randomQuestion value to select question
 
 let mainQuestion = document.getElementById("question").innerHTML = setQuestions[randomQuestion].question;
-document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].answers[1];
-document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].answers[2];
-document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].answers[3];
-document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].answers[4];
+document.getElementById("option-1").innerHTML = setQuestions[randomQuestion].option1;
+document.getElementById("option-2").innerHTML = setQuestions[randomQuestion].option2;
+document.getElementById("option-3").innerHTML = setQuestions[randomQuestion].option3;
+document.getElementById("option-4").innerHTML = setQuestions[randomQuestion].option4;
 
 //how to get the correct answer ? eventlistener 
 // getElementsbyclassname returns an array ? 
+//question
+let getCorrectAnswer = setQuestions[randomQuestion].correctAnswer;
+console.log(mainQuestion);
+console.log(getCorrectAnswer);
 
-setQuestions.forEach(setQuestions => {
-    let checkAnswer = getCorrectAnswer();
-    if (checkAnswer === setQuestions.correctAnswer)
-    correctBtn;
-    score++;
-})
+function displayAnswer () {
+    
+}
 
 
-//Score board
-let score = 0;
 
-// An event to tell you that you have the correct answer
-let correctBtn = document.createElement('button');
-correctBtn.innerHTML = "You are correct";
 
-// store the correct answer 
 
-let getCorrectAnswer = []
-console.log(getCorrectAnswer)
+
+
 
 /* ?? How to add the question from the object array, after the question has been answered
    how to confirm the correct answer?
