@@ -81,7 +81,9 @@ mainQuestion.innerText = activeQuestion.question;
 options.forEach((options) => {
     const number = options.dataset["option"];
     options.innerText = activeQuestion ["option" + number];
+    
 });
+
 // remove question from array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
 questionLeft.splice(randomQuestion, 1);
@@ -90,6 +92,9 @@ displayAnswers =true;
 
 options.forEach(options => {
     options.addEventListener("click", e => {
+        if (!displayAnswers) return;
+
+        displayAnswers =false;
 
         let selection = e.target;
         let answerSelection = selection.dataset["option"];
@@ -98,17 +103,23 @@ options.forEach(options => {
        let finalAnswer = "incorrect";
        if (answerSelection == activeQuestion.answer) {
         finalAnswer ="correct";
-        console.log(finalAnswer);
        }
-
-       selection.setAttribute('value', finalAnswer);
-      
+//https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
+       
+       selection.setAttribute('class', finalAnswer);
+       setTimeout (function() {
+        selection.removeAttribute('class', finalAnswer);
         getNextQuestion();
+        }, 1000);
+
+        document.getElementById("display-answer").innerText = finalAnswer;
+
+       
+
+
+
     });
 });
-
-
-
 
 startGame();
 
