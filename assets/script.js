@@ -12,6 +12,7 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    let displayAnswers = false;
    let questionCounter = 0;
    let questionLeft = [];
+   let restart = document.getElementById("start");
 
    let totalQuestions = 3;
 
@@ -20,7 +21,7 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
    const setQuestions = [
     {
-        question: "What is a group of crows called ?",
+        question: "What is a group of crows called?",
         option1: "flock",
         option2: "Murder",
         option3: "Swarm",
@@ -66,10 +67,11 @@ startGame = () => {
 
 
 getNextQuestion = () => {
-    if (questionLeft.length === 0 || questionCounter >= totalQuestions);
-    //return window.location.assign('index.html');
+    // how to reset the game https://stackoverflow.com/questions/59142915/how-to-get-back-to-the-start-of-the-array-in-javascript
+    if (questionLeft.length === 0 || questionCounter >= totalQuestions) {
+        return restart;
 
-
+    }
 questionCounter++;
 // select random question
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
