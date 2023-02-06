@@ -96,7 +96,7 @@ options.forEach(options => {
        // show correct answer
 
        let finalAnswer = "incorrect";
-       if (answerSelection !== activeQuestion.answer) {
+       if (answerSelection == activeQuestion.answer) {
         finalAnswer ="correct";
         console.log(finalAnswer);
        }
