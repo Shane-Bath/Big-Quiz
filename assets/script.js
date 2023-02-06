@@ -72,6 +72,7 @@ getNextQuestion = () => {
     if (questionLeft.length === 0 || questionCounter >= totalQuestions) {
         return window.location.href = "endGame.html"
     }
+//add questions 
     questionCounter++;
 // select random question
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
@@ -121,6 +122,17 @@ options.forEach(options => {
 });
 
 startGame();
+
+
+// 06 02 23 To add score board and a timer
+// Add API for questions 
+// The text does not read very well, look at font 
+// check javascript through validator 
+
+
+
+
+
 
 //https://stackoverflow.com/questions/19030742/difference-between-innertext-innerhtml-and-value 
 // select question 
