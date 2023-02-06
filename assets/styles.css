@@ -31,7 +31,7 @@ button {
     border: none;
     font-weight: 800;
 }
-
+ /* Class is overwritten by the getattribute-- what is the alternative  */
 .btn, .correct, .incorrect {
     padding: 15px;
     width: 60px;

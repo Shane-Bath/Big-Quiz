@@ -108,11 +108,12 @@ options.forEach(options => {
        }
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
 //clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
+//https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-element  setAttribute is over writing the class in the element, I want to add an extra class
        
-       selection.setAttribute('class', finalAnswer);
+       selection.classList.add(finalAnswer);
        document.getElementById("display-answer").innerText = finalAnswer;
        setTimeout (function() {
-        selection.removeAttribute('class', finalAnswer);
+        selection.classList.remove(finalAnswer);
         document.getElementById("display-answer").innerText = "";
         getNextQuestion();
         }, 1000);
