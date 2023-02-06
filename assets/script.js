@@ -61,10 +61,8 @@ document.getElementById("start").addEventListener(
 startGame = () => {
     questionCounter = 0;
     questionLeft = [...setQuestions];
-    console.log(questionLeft)
     getNextQuestion();
 };
-
 
 getNextQuestion = () => {
     

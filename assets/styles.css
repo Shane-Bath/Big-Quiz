@@ -4,6 +4,7 @@ body {
     display: grid;
     place-items: center;
     font-family: 'Titan One', cursive;
+    letter-spacing: 1px;
 }
 
 #game-area {
@@ -21,17 +22,7 @@ body {
 
 }
 
-li {
-    list-style: none;
-    padding: 5px;
-    border: 2px solid #ffff;
-    border-radius: 10px;
-    margin: 3px;
-    text-align: center;
-}
-
 button {
-
     padding: 15px;
     background-color: #F55050;
     border-radius: 10px;
@@ -41,15 +32,21 @@ button {
     font-weight: 800;
 }
 
-.btn {
+.btn, .correct, .incorrect {
     padding: 15px;
-    width: auto;
+    width: 60px;
+    background-color: black;
+    border: 2px;
+    border-color: #ffffff;
+    border-radius: 10px;
+    margin: 3px;
+    text-align: center;
 }
 
 .correct {
-    background-color: #7fffd4;
+    background-color: #09ae77;
 }
 
 .incorrect {
-    background-color: #ff0000;
+    background-color: #e30202;
 }
