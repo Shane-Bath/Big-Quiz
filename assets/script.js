@@ -61,6 +61,7 @@ document.getElementById("start").addEventListener(
 startGame = () => {
     questionCounter = 0;
     questionLeft = [...setQuestions];
+    console.log(questionLeft)
     getNextQuestion();
 };
 
@@ -73,7 +74,7 @@ getNextQuestion = () => {
 questionCounter++;
 // select random question
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
-console.log(randomQuestion); // working selection number between 0-2
+//console.log(randomQuestion); // working selection number between 0-2
 currentQuestion = questionLeft[randomQuestion];
 //populate the question and choose from the array
 mainQuestion.innerText = currentQuestion.question;
@@ -90,10 +91,14 @@ displayAnswers =true;
 
 options.forEach(options => {
     options.addEventListener("click", e => {
+//match select answer with correct answer - not matching
+        let selection = e.target;
+        let answerSelection = selection.dataset["option"];
+        console.log(answerSelection == currentQuestion.answer);
+        getNextQuestion();
+    });
+});
 
-        //how match clicked selection with correct answer!!
-});
-});
 
 
 
