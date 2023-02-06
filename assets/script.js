@@ -12,7 +12,7 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    let displayAnswers = false;
    let questionCounter = 0;
    let questionLeft = [];
-   let restart = document.getElementById("start");
+   let restart = document.getElementById("game");
 
    let totalQuestions = 3;
 
@@ -67,12 +67,14 @@ startGame = () => {
 
 
 getNextQuestion = () => {
+    
     // how to reset the game https://stackoverflow.com/questions/59142915/how-to-get-back-to-the-start-of-the-array-in-javascript
-    if (questionLeft.length === 0 || questionCounter >= totalQuestions) {
-        return restart;
+    //https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
 
+    if (questionLeft.length === 0 || questionCounter >= totalQuestions) {
+        return window.location.href = "endGame.html"
     }
-questionCounter++;
+    questionCounter++;
 // select random question
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
 //console.log(randomQuestion); // working selection number between 0-2
