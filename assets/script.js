@@ -101,6 +101,7 @@ options.forEach(options => {
         console.log(finalAnswer);
        }
 
+       selection.setAttribute('value', finalAnswer);
       
         getNextQuestion();
     });
