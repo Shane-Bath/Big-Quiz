@@ -14,17 +14,12 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    let questionCounter = 0;
    let availableQuestions = [];
 
-document.getElementById("start").addEventListener(
-    "click",
-   () => {
-    document.getElementById("game-area").style.display = "flex"
-    document.getElementById("start").style.display = "none"
-    
-   },
-   false
-);
+   let totalQuestions = 3;
 
-const setQuestions = [
+
+// A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
+
+   const setQuestions = [
     {
         question: "What is a group of crows called ?",
         option1: "flock",
@@ -51,11 +46,42 @@ const setQuestions = [
      },
 ];
 
-startGame = () => {
-    availableQuestions = [... setQuestions];
-    console.log(availableQuestions)
+document.getElementById("start").addEventListener(
+    "click",
+   () => {
+    document.getElementById("game-area").style.display = "flex"
+    document.getElementById("start").style.display = "none"
+    
+   },
+   false
+);
 
-}
+
+// create array from the object array.And set ci
+startGame = () => {
+    questionCounter = 0;
+    availableQuestions = [...setQuestions];
+    getNextQuestion();
+};
+
+
+getNextQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= totalQuestions);
+    //return window.location.assign('index.html');
+
+
+questionCounter++;
+const randomQuestion = Math.floor(Math.random() * availableQuestions.length);
+currentQuestion = availableQuestions[randomQuestion, 1];
+//populate the question and choose from the array
+mainQuestion.innerText = currentQuestion.question;
+//populate the answers https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+options.forEach((options) => {
+    const number = options.dataset["option"];
+    options.innerText = currentQuestion ["option" + number];
+});
+
+};
 
 startGame();
 
@@ -74,7 +100,7 @@ startGame();
 // store the correct answer 
 
  
-// A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
+
 
 
 
