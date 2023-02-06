@@ -7,9 +7,8 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
    let mainQuestion = document.getElementById("question");
    let options = Array.from(document.getElementsByClassName("btn"));
-  // console.log(options)
    let finalAnswer = document.getElementById("display-answer");
-   let currentQuestion = {};
+   let activeQuestion = {};
    let displayAnswers = false;
    let questionCounter = 0;
    let questionLeft = [];
@@ -75,13 +74,13 @@ questionCounter++;
 // select random question
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
 //console.log(randomQuestion); // working selection number between 0-2
-currentQuestion = questionLeft[randomQuestion];
+activeQuestion = questionLeft[randomQuestion];
 //populate the question and choose from the array
-mainQuestion.innerText = currentQuestion.question;
+mainQuestion.innerText = activeQuestion.question;
 //populate the answers https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 options.forEach((options) => {
     const number = options.dataset["option"];
-    options.innerText = currentQuestion ["option" + number];
+    options.innerText = activeQuestion ["option" + number];
 });
 // remove question from array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
@@ -91,10 +90,18 @@ displayAnswers =true;
 
 options.forEach(options => {
     options.addEventListener("click", e => {
-//match select answer with correct answer - not matching
+
         let selection = e.target;
         let answerSelection = selection.dataset["option"];
-        console.log(answerSelection == currentQuestion.answer);
+       // show correct answer
+
+       let finalAnswer = "incorrect";
+       if (answerSelection !== activeQuestion.answer) {
+        finalAnswer ="correct";
+        console.log(finalAnswer);
+       }
+
+      
         getNextQuestion();
     });
 });
