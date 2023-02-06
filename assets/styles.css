@@ -11,6 +11,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 500px;
+    padding: 5px;
     background-color: #d1633a;
     color: #ffffff;
     box-shadow: 1px 3px 8px 5px #808080;
