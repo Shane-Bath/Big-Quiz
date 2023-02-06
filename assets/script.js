@@ -71,8 +71,10 @@ getNextQuestion = () => {
 
 
 questionCounter++;
+// select random question
 const randomQuestion = Math.floor(Math.random() * availableQuestions.length);
-currentQuestion = availableQuestions[randomQuestion, 1];
+console.log(randomQuestion); // working selection number between 0-2
+currentQuestion = availableQuestions[randomQuestion];
 //populate the question and choose from the array
 mainQuestion.innerText = currentQuestion.question;
 //populate the answers https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
