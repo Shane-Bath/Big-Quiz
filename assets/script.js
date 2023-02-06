@@ -102,9 +102,9 @@ options.forEach(options => {
         let answerSelection = selection.dataset["option"];
        // show correct answer
 
-       let finalAnswer = "incorrect";
+       let finalAnswer = "Incorrect";
        if (answerSelection == activeQuestion.answer) {
-        finalAnswer ="correct";
+        finalAnswer ="Correct";
        }
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
 //clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html

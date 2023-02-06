@@ -32,7 +32,7 @@ button {
     font-weight: 800;
 }
  /* Class is overwritten by the getattribute-- what is the alternative  */
-.btn, .correct, .incorrect {
+.btn, .Correct, .Incorrect {
     padding: 15px;
     width: 60px;
     background-color: black;
@@ -43,10 +43,10 @@ button {
     text-align: center;
 }
 
-.correct {
+.Correct {
     background-color: #09ae77;
 }
 
-.incorrect {
+.Incorrect {
     background-color: #e30202;
 }
