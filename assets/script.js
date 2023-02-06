@@ -85,11 +85,16 @@ console.log(mainQuestion);
 console.log(getCorrectAnswer);
 
 
-document.querySelector('answer').addEventListener ("mousedown",
-() => {
-    let 
+document.querySelector(".btn").addEventListener("click", displayAnswer)
+
+function displayAnswer () {
+    document.getElementById("display-answer").innerHTML = getCorrectAnswer;
 }
-)
+ 
+        
+   displayAnswer();
+
+
 
 
 
