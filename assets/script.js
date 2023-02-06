@@ -105,19 +105,15 @@ options.forEach(options => {
         finalAnswer ="correct";
        }
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
+//clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
        
        selection.setAttribute('class', finalAnswer);
+       document.getElementById("display-answer").innerText = finalAnswer;
        setTimeout (function() {
         selection.removeAttribute('class', finalAnswer);
+        document.getElementById("display-answer").innerText = "";
         getNextQuestion();
         }, 1000);
-
-        document.getElementById("display-answer").innerText = finalAnswer;
-
-       
-
-
-
     });
 });
 

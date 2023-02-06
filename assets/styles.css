@@ -46,11 +46,6 @@ button {
     width: auto;
 }
 
-.btn:hover {
-    background-color: #F55050;
-    border-radius: 10px;
-}
-
 .correct {
     background-color: #7fffd4;
 }
