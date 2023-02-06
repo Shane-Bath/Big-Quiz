@@ -6,12 +6,13 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    */
 
    let mainQuestion = document.getElementById("question");
-   let option1 = document.getElementById("option-1");
-   let option2 = document.getElementById("option-2");
-   let option3 = document.getElementById("option-3");
-   let option4 = document.getElementById("option-4");
-   //let randomQuestion; // generate a random number to select question from the array
+   let options = Array.from(document.getElementsByClassName("btn"));
+  // console.log(options)
    let finalAnswer = document.getElementById("display-answer");
+   let currentQuestion = {};
+   let displayAnswers = false;
+   let questionCounter = 0;
+   let availableQuestions = [];
 
 document.getElementById("start").addEventListener(
     "click",
@@ -23,8 +24,40 @@ document.getElementById("start").addEventListener(
    false
 );
 
+const setQuestions = [
+    {
+        question: "What is a group of crows called ?",
+        option1: "flock",
+        option2: "Murder",
+        option3: "Swarm",
+        option4: "Firm",
+        answer: 2,
+    },
+     {
+        question: "How many dots appear on pair of dice?", 
+        option1: "42",
+        option2: "40",
+        option3: "44",
+        option4: "38",
+        answer: 1,
+     },
+     {
+        question: "Which is the only body part that is fully grown from birth?",
+        option1: "Nose",
+        option2: "Ears",
+        option3: "Eyes",
+        option4: "Elbow",
+        answer: 3,
+     },
+];
 
+startGame = () => {
+    availableQuestions = [... setQuestions];
+    console.log(availableQuestions)
 
+}
+
+startGame();
 
 //https://stackoverflow.com/questions/19030742/difference-between-innertext-innerhtml-and-value 
 // select question 
@@ -43,32 +76,7 @@ document.getElementById("start").addEventListener(
  
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
 
-const setQuestions = [
-        {
-            question: "What is a group of crows called ?",
-            option1: "flock",
-            option2: "Murder",
-            option3: "Swarm",
-            option4: "Firm",
-            answer: 2,
-        },
-         {
-            question: "How many dots appear on pair of dice?", 
-            option1: "42",
-            option2: "40",
-            option3: "44",
-            option4: "38",
-            answer: 1,
-         },
-         {
-            question: "Which is the only body part that is fully grown from birth?",
-            option1: "Nose",
-            option2: "Ears",
-            option3: "Eyes",
-            option4: "Elbow",
-            answer: 3,
-         },
-];
+
 
  //Math Random to choose question - 
  //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
