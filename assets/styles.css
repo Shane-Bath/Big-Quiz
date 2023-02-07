@@ -50,3 +50,7 @@ button {
 .Incorrect {
     background-color: #e30202;
 }
+
+#score {
+    display: none;
+}

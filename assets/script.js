@@ -13,7 +13,7 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    let questionCounter = 0;
    let questionLeft = [];
    let restart = document.getElementById("game");
-   let score = document.getElementById("score")
+   let score = 0
 
    let totalQuestions = 3;
 
@@ -50,9 +50,9 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 document.getElementById("start").addEventListener(
     "click",
    () => {
-    document.getElementById("game-area").style.display = "flex"
-    document.getElementById("start").style.display = "none"
-    
+    document.getElementById("game-area").style.display = "flex";
+    document.getElementById("start").style.display = "none";
+    document.getElementById("score").style.display ="flex";
    },
    false
 );
@@ -75,8 +75,7 @@ getNextQuestion = () => {
     }
 //add questions 
     questionCounter++;
-// score
-score = 0;
+
 // select random question
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
 //console.log(randomQuestion); // working selection number between 0-2
@@ -109,6 +108,8 @@ options.forEach(options => {
        let finalAnswer = "Incorrect";
        if (answerSelection == activeQuestion.answer) {
         finalAnswer ="Correct";
+        score++;
+        document.getElementById("score").innerText = `Score : ${score}`
     }
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
 //clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
@@ -116,14 +117,6 @@ options.forEach(options => {
        
        selection.classList.add(finalAnswer);
        document.getElementById("display-answer").innerText = finalAnswer;
-       // Score
-       function gameScore () {
-        document.getElementsByClassName("Correct");
-        score++;
-        document.getElementById("score").innerHTML = score;
-        console.log(score);
-       }
-       gameScore();
 
        setTimeout (function() {
         selection.classList.remove(finalAnswer);
