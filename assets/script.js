@@ -112,6 +112,7 @@ options.forEach(options => {
         finalAnswer ="Correct";
         score++;
         document.getElementById("score").innerText = `Score : ${score}`
+        // store the score to use in endgame.js
         localStorage.setItem("score", score);
     }
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
@@ -142,7 +143,7 @@ startGame();
 
 
 
-// 06 02 23 To add score board and a timer
+
 // Add API for questions 
 // The text does not read very well, look at font 
 // check javascript through validator 
