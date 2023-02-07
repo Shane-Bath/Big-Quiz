@@ -130,6 +130,14 @@ options.forEach(options => {
 
 startGame();
 
+//endGame.HMTL
+//let finalScore = document.getElementById("final-score")
+
+
+
+
+
+
 
 // 06 02 23 To add score board and a timer
 // Add API for questions 
