@@ -15,6 +15,8 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    let restart = document.getElementById("game");
    let score = 0
 
+   
+
    let totalQuestions = 3;
 
 
@@ -110,6 +112,7 @@ options.forEach(options => {
         finalAnswer ="Correct";
         score++;
         document.getElementById("score").innerText = `Score : ${score}`
+        localStorage.setItem("score", score);
     }
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
 //clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
