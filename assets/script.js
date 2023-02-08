@@ -19,17 +19,32 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
    let totalQuestions = 3;
 
+
+
+   let openTdb = fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
+            .then(response => response.json())
+            .then(data => {
+                // let fetchQuestion = data.map((results) => {
+                //     console.log(fetchQuestion);
+
+
+                // });
+                console.log(data.results.question)
+            });
 //08 02 23 hwo to populate the below oject array from api. 
 // fetch() and JSON?  map? and Destructuring assignment
 // open triva DB API
 //"question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?", == question
-// "correct_answer": "Ed Sheeran - I See Fire",    == choice 1 (or random between 1 - 4 )
+// "correct_answer": "Ed Sheeran - I See Fire",    == option 1 (or random between 1 - 4 )
 // "incorrect_answers": [
-// "Marvin Gaye - Sexual Healing", == choice (random )
-// "Coldplay - Midnight", == choice (random )
-// "a-ha - Take On Me" == choice (random )
+// "Marvin Gaye - Sexual Healing", == option (random )
+// "Coldplay - Midnight", == option (random )
+// "a-ha - Take On Me" == option (random )
 // then correct answer to 1-4 
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
+
+
+
 
    const setQuestions = [
     {
@@ -56,6 +71,16 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
         option4: "Elbow",
         answer: 3,
      },
+     {
+        question:"",
+        option1:"",
+        option2:"",
+        option3:"",
+        option4:"",
+        answer:"",
+     }
+
+
 ];
 
 document.getElementById("start").addEventListener(
@@ -141,7 +166,7 @@ options.forEach(options => {
     });
 });
 
-startGame();
+//startGame();
 
 //endGame.HMTL
 //let finalScore = document.getElementById("final-score")
@@ -339,9 +364,3 @@ function gamearea() {
 }
 
 gamearea(); */
-
-
-
-
-
-
