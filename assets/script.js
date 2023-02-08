@@ -15,22 +15,70 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
    let restart = document.getElementById("game");
    let score = 0
 
-   
+  
 
    let totalQuestions = 3;
 
+   
+
+   function abs() {
+    fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
+    .then(res => {return res.json()})
+    .then(data => {
+        let a = [];
+        a.push(data);
+        
+        let q = json.parse(data)
+        console.log(q)
+    });
+    
+   }
+   abs();
+   
+
+   
+   
 
 
-   let openTdb = fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
-            .then(response => response.json())
-            .then(data => {
-                // let fetchQuestion = data.map((results) => {
-                //     console.log(fetchQuestion);
+
+//    let questionTransfer = 
 
 
-                // });
-                console.log(data.results.question)
-            });
+//    async function bob(url) {
+//     const response = await fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`);
+//     let data = await response.json();
+//     console.log(data);
+    
+// }
+//  bob(questionTransfer);
+
+// let q = questionTransfer.map(data => {
+//     let setQuestions = {
+//     "questions": data.results[0].question,
+//     "option1": data.results[0].correct_answer,
+//     };
+//     return setQuestions;
+// })
+// console.log(q);
+
+
+
+// fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
+  
+//             .then(response => response.json())
+//             .then(data => {
+//             questionTransfer = data;
+//             });
+// console.log(questionTransfer)
+    //  = .Map(({results, question}) => ({
+    //     [question]: question}));
+    
+
+
+
+
+
+
 //08 02 23 hwo to populate the below oject array from api. 
 // fetch() and JSON?  map? and Destructuring assignment
 // open triva DB API
@@ -46,42 +94,42 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
 
 
-   const setQuestions = [
-    {
-        question: "What is a group of crows called?",
-        option1: "flock",
-        option2: "Murder",
-        option3: "Swarm",
-        option4: "Firm",
-        answer: 2,
-    },
-     {
-        question: "How many dots appear on pair of dice?", 
-        option1: "42",
-        option2: "40",
-        option3: "44",
-        option4: "38",
-        answer: 1,
-     },
-     {
-        question: "Which is the only body part that is fully grown from birth?",
-        option1: "Nose",
-        option2: "Ears",
-        option3: "Eyes",
-        option4: "Elbow",
-        answer: 3,
-     },
-     {
-        question:"",
-        option1:"",
-        option2:"",
-        option3:"",
-        option4:"",
-        answer:"",
-     }
+//    const setQuestions = [
+//     {
+//         question: "What is a group of crows called?",
+//         option1: "flock",
+//         option2: "Murder",
+//         option3: "Swarm",
+//         option4: "Firm",
+//         answer: 2,
+//     },
+//      {
+//         question: "How many dots appear on pair of dice?", 
+//         option1: "42",
+//         option2: "40",
+//         option3: "44",
+//         option4: "38",
+//         answer: 1,
+//      },
+//      {
+//         question: "Which is the only body part that is fully grown from birth?",
+//         option1: "Nose",
+//         option2: "Ears",
+//         option3: "Eyes",
+//         option4: "Elbow",
+//         answer: 3,
+//      },
+//      {
+//         question: "",
+//         option1: "",
+//         option2: "",
+//         option3:"",
+//         option4: "",
+//         answer: "",
+//      }
 
 
-];
+// ];
 
 document.getElementById("start").addEventListener(
     "click",
