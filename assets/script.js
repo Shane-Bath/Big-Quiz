@@ -19,7 +19,16 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
    let totalQuestions = 3;
 
-
+//08 02 23 hwo to populate the below oject array from api. 
+// fetch() and JSON?  map? and Destructuring assignment
+// open triva DB API
+//"question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?", == question
+// "correct_answer": "Ed Sheeran - I See Fire",    == choice 1 (or random between 1 - 4 )
+// "incorrect_answers": [
+// "Marvin Gaye - Sexual Healing", == choice (random )
+// "Coldplay - Midnight", == choice (random )
+// "a-ha - Take On Me" == choice (random )
+// then correct answer to 1-4 
 // A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
 
    const setQuestions = [
