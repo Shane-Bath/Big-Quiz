@@ -21,20 +21,22 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
    
 
-   function abs() {
-    fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
-    .then(res => {return res.json()})
-    .then(data => {
-        let a = [];
-        a.push(data);
-        
-        let q = json.parse(data)
-        console.log(q)
-    });
-    
-   }
-   abs();
    
+    fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
+    .then(response => response.json())
+    .then(data => {
+        let a = [data];
+        let setQuestions =[];
+        setQuestions = setQuestions.concat(a);
+        console.log(setQuestions);
+        
+       
+    })
+    .catch(error => console.error(error));
+    
+
+  
+
 
    
    
