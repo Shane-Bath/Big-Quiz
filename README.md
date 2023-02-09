@@ -15,3 +15,82 @@ https://www.youtube.com/watch?v=zgHim4ZDpZY&list=PLJJVMUtpCkXWgmK8ksQGZuhlHXbG2R
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
 https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
 https://www.w3schools.com/jsref/prop_style_display.asp
+// how to reset the game https://stackoverflow.com/questions/59142915/how-to-get-back-to-the-start-of-the-array-in-javascript
+//https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
+https://stackoverflow.com/questions/73685477/how-to-include-array-from-a-js-file-into-another-js-file
+https://stackoverflow.com/questions/58211880/uncaught-syntaxerror-cannot-use-import-statement-outside-a-module-when-import
+https://stackoverflow.com/questions/63975194/referenceerror-module-is-not-defined
+https://stackoverflow.com/questions/58384179/syntaxerror-cannot-use-import-statement-outside-a-module
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+
+
+
+    fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`)
+    .then(response => response.json())
+    .then(data => {
+        //console.log(data.results); // returning array
+        data.results.map(data => {
+            let setQuestions = {
+                question: data.question
+                options:[... data.incorrect_answers]; // array spread operator to divide up into a new array
+                 
+            };
+            console.log(setQuestions)  // returning question: question
+        
+        ; // splice into options1: etc
+        console.log(options);  // returning mix of  'M&amp;M&#039;s' ?!? and clear text?
+    });
+})
+    .catch(error => console.error(error));
+
+
+//    let questionTransfer = 
+
+
+//    async function bob(url) {
+//     const response = await fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`);
+//     let data = await response.json();
+//     console.log(data);
+    
+// }
+//  bob(questionTransfer);
+
+// let q = questionTransfer.map(data => {
+//     let setQuestions = {
+//     "questions": data.results[0].question,
+//     "option1": data.results[0].correct_answer,
+//     };
+//     return setQuestions;
+// })
+// console.log(q);
+
+
+
+// fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
+  
+//             .then(response => response.json())
+//             .then(data => {
+//             questionTransfer = data;
+//             });
+// console.log(questionTransfer)
+    //  = .Map(({results, question}) => ({
+    //     [question]: question}));
+    
+
+
+
+
+
+
+//08 02 23 hwo to populate the below oject array from api. 
+// fetch() and JSON?  map? and Destructuring assignment
+// open triva DB API
+//"question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?", == question
+// "correct_answer": "Ed Sheeran - I See Fire",    == option 1 (or random between 1 - 4 )
+// "incorrect_answers": [
+// "Marvin Gaye - Sexual Healing", == option (random )
+// "Coldplay - Midnight", == option (random )
+// "a-ha - Take On Me" == option (random )
+// then correct answer to 1-4 
