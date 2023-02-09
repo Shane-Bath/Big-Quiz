@@ -36,6 +36,10 @@ https://stackoverflow.com/questions/63975194/referenceerror-module-is-not-define
 https://stackoverflow.com/questions/58384179/syntaxerror-cannot-use-import-statement-outside-a-module
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+https://www.w3schools.com/jsref/met_storage_clear.asp
+How to retrieve the final score from the script.js
+https://stackoverflow.com/questions/2932782/global-variables-in-javascript-across-multiple-files?noredirect=1&lq=1
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
 
 

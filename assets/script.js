@@ -8,6 +8,7 @@
    let questionLeft = [];
    let restart = document.getElementById("game");
    let score = 0
+   document.getElementById("score").innerText = `Score : 0`
    let totalQuestions = 5; // set number of questions
 
 
@@ -122,7 +123,7 @@ getNextQuestion = () => {
 const randomQuestion = Math.floor(Math.random() * questionLeft.length);
 //console.log(randomQuestion); // working selection number between 0-2
 activeQuestion = questionLeft[randomQuestion];
-console.log(activeQuestion);
+
 //populate the question and choose from the array
 mainQuestion.innerText = activeQuestion.question;
 //populate the answers https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
@@ -149,13 +150,20 @@ options.forEach(options => {
        // show correct answer
 
        let finalAnswer = "Incorrect";
+   
        if (answerSelection == activeQuestion.answer) {
         finalAnswer ="Correct";
         score++;
+        //console.log(score)
         document.getElementById("score").innerText = `Score : ${score}`
-        // store the score to use in endgame.js
         localStorage.setItem("score", score);
-    }
+      } 
+
+         
+   
+        // store the score to use in endgame.js
+        
+    
 //https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
 //clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
 //https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-element  setAttribute is over writing the class in the element, I want to add an extra class
