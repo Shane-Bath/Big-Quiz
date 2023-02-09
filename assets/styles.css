@@ -54,11 +54,13 @@ button {
 #score {
     margin-bottom: 5px;
     display: none;
+    position: relative;
+    left: 30%;
 }
 
 @media (max-width: 420px) {
 #game-area {
-    height: 40vh;
+    height: 45vh;
     margin: 5px;
     width: auto;
 

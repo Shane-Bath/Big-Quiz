@@ -9,7 +9,7 @@
    let restart = document.getElementById("game");
    let score = 0
    document.getElementById("score").innerText = `Score : 0`
-   let totalQuestions = 5; // set number of questions
+   let totalQuestions = 5; // set number of questions in the game
 
 
 const setQuestions = [
@@ -96,86 +96,71 @@ const setQuestions = [
         
 ];
 
-//Game function, calls questions and answers for setQuestion array.
+//Game function, calls questions and answers from setQuestion array.
 startGame = () => {  
     document.getElementById("start").addEventListener(
         "click",
        () => {
-        document.getElementById("game-area").style.display = "flex";
-        document.getElementById("start").style.display = "none";
+        document.getElementById("game-area").style.display = "flex"; // display main game area with questions and answers
+        document.getElementById("start").style.display = "none"; // hide start button
         document.getElementById("score").style.display ="flex";
        },
        false
     );
+    // keep track of questions
     questionCounter = 0;
     questionLeft = [...setQuestions];
     getNextQuestion();
 };
 
 getNextQuestion = () => {
-    if (questionLeft.length === 0 || questionCounter >= totalQuestions) {
-        return window.location.href = "endGame.html"
+    if (questionLeft.length === 0 || questionCounter >= totalQuestions) {      // ends game when preset number of questions is reached || or until you reach the end of all questions
+        return window.location.href = "endGame.html"      // end of the game managed by endGame.js
     }
-//add questions 
-    questionCounter++;
-    
-// select random question
-const randomQuestion = Math.floor(Math.random() * questionLeft.length);
-//console.log(randomQuestion); // working selection number between 0-2
-activeQuestion = questionLeft[randomQuestion];
 
-//populate the question and choose from the array
-mainQuestion.innerText = activeQuestion.question;
-//populate the answers https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+    questionCounter++;   //add questions used, 
+    
+    const randomQuestion = Math.floor(Math.random() * questionLeft.length);  // create a random number between 1-5 (|| max questions) shuffle questions
+    activeQuestion = questionLeft[randomQuestion];     
+    
+    mainQuestion.innerText = activeQuestion.question; 
+
 options.forEach((options) => {
     const number = options.dataset["option"];
-    options.innerText = activeQuestion ["option" + number];
-    
-});
+    options.innerText = activeQuestion ["option" + number]; // loop through options and assign a number, in order to match the number in correct .answer (setQuestions.answer)
+   });
+  
 
-// remove question from array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-
-questionLeft.splice(randomQuestion, 1);
-displayAnswers =true;
+questionLeft.splice(randomQuestion, 1);  
+displayAnswers = true;
 };
-
+                                             
 options.forEach(options => {
-    options.addEventListener("click", e => {
+    options.addEventListener("click", e => {                 
         if (!displayAnswers) return;
 
         displayAnswers =false;
 
         let selection = e.target;
-        let answerSelection = selection.dataset["option"];
-       // show correct answer
-
-       let finalAnswer = "Incorrect";
+        let answerSelection = selection.dataset["option"];   
+       let finalAnswer = "Incorrect";                          // displays correct or incorrect 
    
-       if (answerSelection == activeQuestion.answer) {
-        finalAnswer ="Correct";
+       if (answerSelection == activeQuestion.answer) {         //matches the click answer with the active question, if match display message and logs score
+        finalAnswer ="Correct";                                
+        
         score++;
-        //console.log(score)
-        document.getElementById("score").innerText = `Score : ${score}`
+        document.getElementById("score").innerText = `Score : ${score}`   // tracks score and stored in local storage
         localStorage.setItem("score", score);
       } 
-
-         
-   
-        // store the score to use in endgame.js
-        
-    
-//https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
-//clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
-//https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-element  setAttribute is over writing the class in the element, I want to add an extra class
        
-       selection.classList.add(finalAnswer);
+       selection.classList.add(finalAnswer);                                //add class "incorrect" or "correct" HTML as identifier, to add css stylings 
        document.getElementById("display-answer").innerText = finalAnswer;
 
        setTimeout (function() {
         selection.classList.remove(finalAnswer);
         document.getElementById("display-answer").innerText = "";
         getNextQuestion();
-        }, 1000);
+        }, 1000);     // delays the removal of class incorrect or correct allows time for the button to change color to give visual representation of the answer.
     });
 });
 

@@ -28,6 +28,7 @@ https://www.youtube.com/watch?v=zgHim4ZDpZY&list=PLJJVMUtpCkXWgmK8ksQGZuhlHXbG2R
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
 https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
 https://www.w3schools.com/jsref/prop_style_display.asp
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 https://stackoverflow.com/questions/59142915/how-to-get-back-to-the-start-of-the-array-in-javascript
 https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
 https://stackoverflow.com/questions/73685477/how-to-include-array-from-a-js-file-into-another-js-file
@@ -37,9 +38,9 @@ https://stackoverflow.com/questions/58384179/syntaxerror-cannot-use-import-state
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 https://www.w3schools.com/jsref/met_storage_clear.asp
-How to retrieve the final score from the script.js
 https://stackoverflow.com/questions/2932782/global-variables-in-javascript-across-multiple-files?noredirect=1&lq=1
 https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+https://stackoverflow.com/questions/40904643/javascript-how-to-set-null-input-equal-to-0
 
 
 
