@@ -1,20 +1,46 @@
 # The Big Quiz 
 My multiple choice quiz game tests the player over a wide range of topics. A Simple colorful interface, which generate random questions with the correct answer. 
 I was hoping to demonstrate how to use javascript to present and manage large data-sets. Unfortunately this project managed to demonstrate to me that 
-this topic will require much large investment in time to really to begin to understand this complex subject. On a positive note I did enjoy failing at to achieve my ultimate goal of using 
-an API database to generate the choices of question, difficulty and style of game, it has not discouraged me.  I have a much better understanding and appreciation of Javascript, then I had a few 
-weeks ago. 
+this topic will require much larger investment in time to really to begin to understand this complex subject. On a positive note I did enjoy failing to achieve my ultimate goal of using 
+an API database to generate the choices of question, difficulty and style of game, but it has not discouraged me.  I have a much better understanding and appreciation of Javascript, than I had a few weeks ago. 
+
+The game is in a style of an App, not a webpage. 
+
+## Landing page 
+A simple page with a title and and start button. The Start button color is the main the color for the app. 
+
+![landing Page](./assets/images/landing-page.png)  ---  ![landing page mobile](./assets/images/landing-page-mobile.png)
 
 
+## Font 
+The font is is a google font Titan. I choose this font as it is in a fun style.
 
+![font](./assets/images/font-titan.png)
 
+## Game Area
+Once the player has clicked the start button you are brought to the game area. The question and your answer options appear straight away.
+The question is selected randomly from an object array. In this version of the game you have to answer 5 questions to demonstrate the functionality of the code. 
+Again the style is simple and in keeping with an app, the color remain consistent. 
+
+The questions populate within the buttons, if you click a button you are given feedback straight away. They change color to indicate weather or not the player selected the correct question. Red for incorrect, green for correct. The statement below the button changes to correct or incorrect. 
+
+The score keeps track of the number of correct question the player answered. 
+
+![Game area](./assets/images/game-area.png) ---    ![question](./assets/images/question.png) 
+
+## Game over 
+
+The game ends once the player has answered all the questions. Your final score is displayed and you have the option of restarting the game. 
+
+![end game](./assets/images/end-game.png)
 
 
 
 
 https://stackoverflow.com/questions/684672/how-do-i-loop-through-or-enumerate-a-javascript-object?noredirect=1&lq=1
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-https://stackoverflow.com/questions/29886552/why-are-objects-not-iterable-in-javascripthttps://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
+https://stackoverflow.com/questions/29886552/why-are-objects-not-iterable-in-javascript
+https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
 https://stackoverflow.com/questions/69312775/how-do-i-populate-an-array-of-objects-where-every-object-has-an-array-inside-of
 https://stackoverflow.com/questions/586182/how-to-insert-an-item-into-an-array-at-a-specific-index-javascript?rq=1
 https://stackoverflow.com/questions/1996747/add-new-value-to-an-existing-array-in-javascript?noredirect=1&lq=1
@@ -41,74 +67,11 @@ https://www.w3schools.com/jsref/met_storage_clear.asp
 https://stackoverflow.com/questions/2932782/global-variables-in-javascript-across-multiple-files?noredirect=1&lq=1
 https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 https://stackoverflow.com/questions/40904643/javascript-how-to-set-null-input-equal-to-0
+https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
+clear inner.HTML https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
+https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-elemen
 
 
 
 
-    fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`)
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data.results); // returning array
-        data.results.map(data => {
-            let setQuestions = {
-                question: data.question
-                options:[... data.incorrect_answers]; // array spread operator to divide up into a new array
-                 
-            };
-            console.log(setQuestions)  // returning question: question
-        
-        ; // splice into options1: etc
-        console.log(options);  // returning mix of  'M&amp;M&#039;s' ?!? and clear text?
-    });
-})
-    .catch(error => console.error(error));
-
-
-//    let questionTransfer = 
-
-
-//    async function bob(url) {
-//     const response = await fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`);
-//     let data = await response.json();
-//     console.log(data);
-    
-// }
-//  bob(questionTransfer);
-
-// let q = questionTransfer.map(data => {
-//     let setQuestions = {
-//     "questions": data.results[0].question,
-//     "option1": data.results[0].correct_answer,
-//     };
-//     return setQuestions;
-// })
-// console.log(q);
-
-
-
-// fetch(`https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean`)
-  
-//             .then(response => response.json())
-//             .then(data => {
-//             questionTransfer = data;
-//             });
-// console.log(questionTransfer)
-    //  = .Map(({results, question}) => ({
-    //     [question]: question}));
-    
-
-
-
-
-
-
-//08 02 23 hwo to populate the below oject array from api. 
-// fetch() and JSON?  map? and Destructuring assignment
-// open triva DB API
-//"question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?", == question
-// "correct_answer": "Ed Sheeran - I See Fire",    == option 1 (or random between 1 - 4 )
-// "incorrect_answers": [
-// "Marvin Gaye - Sexual Healing", == option (random )
-// "Coldplay - Midnight", == option (random )
-// "a-ha - Take On Me" == option (random )
-// then correct answer to 1-4 
+   
