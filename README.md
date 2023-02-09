@@ -1,3 +1,16 @@
+# The Big Quiz 
+My multiple choice quiz game tests the player over a wide range of topics. A Simple colorful interface, which generate random questions with the correct answer. 
+I was hoping to demonstrate how to use javascript to present and manage large data-sets. Unfortunately this project managed to demonstrate to me that 
+this topic will require much large investment in time to really to begin to understand this complex subject. On a positive note I did enjoy failing at to achieve my ultimate goal of using 
+an API database to generate the choices of question, difficulty and style of game, it has not discouraged me.  I have a much better understanding and appreciation of Javascript, then I had a few 
+weeks ago. 
+
+
+
+
+
+
+
 
 https://stackoverflow.com/questions/684672/how-do-i-loop-through-or-enumerate-a-javascript-object?noredirect=1&lq=1
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
@@ -15,8 +28,8 @@ https://www.youtube.com/watch?v=zgHim4ZDpZY&list=PLJJVMUtpCkXWgmK8ksQGZuhlHXbG2R
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
 https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
 https://www.w3schools.com/jsref/prop_style_display.asp
-// how to reset the game https://stackoverflow.com/questions/59142915/how-to-get-back-to-the-start-of-the-array-in-javascript
-//https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
+https://stackoverflow.com/questions/59142915/how-to-get-back-to-the-start-of-the-array-in-javascript
+https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
 https://stackoverflow.com/questions/73685477/how-to-include-array-from-a-js-file-into-another-js-file
 https://stackoverflow.com/questions/58211880/uncaught-syntaxerror-cannot-use-import-statement-outside-a-module-when-import
 https://stackoverflow.com/questions/63975194/referenceerror-module-is-not-defined

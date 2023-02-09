@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 500px;
+    width:500px;
     padding: 5px;
     background-color: #d1633a;
     color: #ffffff;
@@ -31,11 +31,11 @@ button {
     border: none;
     font-weight: 800;
 }
- /* Class is overwritten by the getattribute-- what is the alternative  */
+
 .btn, .Correct, .Incorrect {
     padding: 15px;
-    width: 60px;
-    background-color: black;
+    width: 80px;
+    background-color: #272424;
     border: 2px;
     border-color: #ffffff;
     border-radius: 10px;
@@ -52,5 +52,15 @@ button {
 }
 
 #score {
+    margin-bottom: 5px;
     display: none;
+}
+
+@media (max-width: 420px) {
+#game-area {
+    height: 40vh;
+    margin: 5px;
+    width: auto;
+
+}
 }
