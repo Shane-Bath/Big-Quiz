@@ -9,4 +9,5 @@ document.getElementById("final-score").innerText = `Your final score is: ${final
 
 function myFunction() {
     location.replace("index.html")
+    localStorage.clear()
   }
