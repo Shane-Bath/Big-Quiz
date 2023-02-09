@@ -8,9 +8,9 @@
    let questionLeft = [];
    let restart = document.getElementById("game");
    let score = 0
-   let totalQuestions = 3;
- 
-// A set of questions for the game in a object -JS: Definitive guide CH6 Objects CH7 Arrays
+   let totalQuestions = 5; // set number of questions
+
+
 const setQuestions = [
     {
         question: "What is a group of crows called?",
@@ -37,19 +37,66 @@ const setQuestions = [
         answer: 3,
      },
      {
-        question: "",
-        option1: "",
-        option2: "",
-        option3:"",
-        option4: "",
-        answer: "",
-     }
-
-
+        question: "Where would you be if you were standing on the spanish Steps?",
+        option1: "Paris",
+        option2: "Dublin",
+        option3:"New York",
+        option4: "Rome",
+        answer: "4",
+     },
+     {
+        question: "What is the most common surname in the United States?",
+        option1: "Smith",
+        option2: "Jones",
+        option3:"Murphy",
+        option4: "Javed",
+        answer: "1",
+     },
+     {
+        question: "What year was the United Nations established?",
+        option1: "1939",
+        option2: "1945",
+        option3:"1952",
+        option4: "1943",
+        answer: "2",
+     },
+     {
+        question: "How many elements are in the periodic table?",
+        option1: "99",
+        option2: "101",
+        option3:"118",
+        option4: "145",
+        answer: "3",
+     },
+     {
+        question: "What shoe brand makes the Mexico 66?",
+        option1: "Nike",
+        option2: "Reebok",
+        option3:"Adidas",
+        option4: "Onitsuka Tiger",
+        answer: "4",
+     },
+     {
+        question: "What company was originally called Cadabra? ",
+        option1: "Intel",
+        option2: "Yahoo",
+        option3:"Google",
+        option4: "Amazon",
+        answer: "4",
+     },
+     {
+        question: "How many ghosts chase Pac-Man at the start of each game?",
+        option1: "1",
+        option2: "2",
+        option3:"4",
+        option4: "3",
+        answer: "3",
+     },
+        
 ];
 
-// create array from the object array.And set ci
-startGame = () => {
+//Game function, calls questions and answers for setQuestion array.
+startGame = () => {  
     document.getElementById("start").addEventListener(
         "click",
        () => {
