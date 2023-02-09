@@ -108,42 +108,42 @@ start the game, https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hid
 
 
 
-//    const setQuestions = [
-//     {
-//         question: "What is a group of crows called?",
-//         option1: "flock",
-//         option2: "Murder",
-//         option3: "Swarm",
-//         option4: "Firm",
-//         answer: 2,
-//     },
-//      {
-//         question: "How many dots appear on pair of dice?", 
-//         option1: "42",
-//         option2: "40",
-//         option3: "44",
-//         option4: "38",
-//         answer: 1,
-//      },
-//      {
-//         question: "Which is the only body part that is fully grown from birth?",
-//         option1: "Nose",
-//         option2: "Ears",
-//         option3: "Eyes",
-//         option4: "Elbow",
-//         answer: 3,
-//      },
-//      {
-//         question: "",
-//         option1: "",
-//         option2: "",
-//         option3:"",
-//         option4: "",
-//         answer: "",
-//      }
+   const setQuestions = [
+    {
+        question: "What is a group of crows called?",
+        option1: "flock",
+        option2: "Murder",
+        option3: "Swarm",
+        option4: "Firm",
+        answer: 2,
+    },
+     {
+        question: "How many dots appear on pair of dice?", 
+        option1: "42",
+        option2: "40",
+        option3: "44",
+        option4: "38",
+        answer: 1,
+     },
+     {
+        question: "Which is the only body part that is fully grown from birth?",
+        option1: "Nose",
+        option2: "Ears",
+        option3: "Eyes",
+        option4: "Elbow",
+        answer: 3,
+     },
+     {
+        question: "",
+        option1: "",
+        option2: "",
+        option3:"",
+        option4: "",
+        answer: "",
+     }
 
 
-// ];
+];
 
 document.getElementById("start").addEventListener(
     "click",
