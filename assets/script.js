@@ -114,8 +114,8 @@ let startGame = () => {
 
 let getNextQuestion = () => {
  if (questionLeft.length === 0 || questionCounter >= totalQuestions) {      // ends game when preset number of questions is reached || or until you reach the end of all questions
-     return window.location.href = "endGame.html";      // end of the game managed by endGame.js
- }
+   return window.location.href = "endGame.html"; // end of the game managed by endGame.js
+}
 
  questionCounter++;   //add questions used, 
  
