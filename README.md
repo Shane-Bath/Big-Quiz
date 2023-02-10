@@ -84,7 +84,7 @@ Thank you to Simen Dehlin
     -   https://www.youtube.com/watch?v=uxf0--uiX0I
     -   https://www.youtube.com/watch?v=tc8DU14qX6I&t=10s
     -   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-    -   https://www.youtube.com/watch?v=zgHim4ZDpZY&list=PLJJVMUtpCkXWgmK8ksQGZuhlHXbG2Rlyn&index=21&t=3150s     10:00  1200 26:13
+    -   https://www.youtube.com/watch?v=zgHim4ZDpZY&list=PLJJVMUtpCkXWgmK8ksQGZuhlHXbG2Rlyn&index=21&t=3150s 
     -   https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden
     -   https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLJJVMUtpCkXWgmK8ksQGZuhlHXbG2Rlyn&index=17
     -   https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/
