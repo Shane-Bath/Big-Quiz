@@ -51,6 +51,15 @@ The game ends once the player has answered all the questions. Your final score i
 There a 30 error found in the Jshint validator, for example - let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). This appears to be the majority.
 All the issue related to ES6. To resolve this it appears that I should be using VAR and older syntax. I will need more time to look into these error.
 
+## Deployment 
+This site was deployed to Github.
+  - In the Github repository, select settings, pages
+  - Select deploy from branch 
+  - Branch, select Main, root and then save.
+
+The link to the site is : (https://shane-bath.github.io/Big-Quiz/)
+
+
 ## Final thoughts
 I am disappointed that I was ultimately unable to implement the fetch() API into this game, unfortunately it was very buggy and I spent a lot of time going down blind alleys. 
 I would like to include a timer, categories, level of difficulty and recording high score. I will continue to work on new quiz game and other projects, in order to improve in this area.
