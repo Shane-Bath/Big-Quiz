@@ -35,6 +35,19 @@ The game ends once the player has answered all the questions. Your final score i
 ![end game](./assets/images/end-game.png)
 
 
+## Validation 
+- HTML 
+  -  Passed, no errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fshane-bath.github.io%2FBig-Quiz%2Findex.html)
+- CSS
+  - Passed, no errors were returned when passing through the official [CSS Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fshane-bath.github.io%2FBig-Quiz%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+-JavaScript
+    - There are 7 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 0.
+    - Largest function has 13 statements in it, while the median is 3.
+    - The most complex function has a cyclomatic complexity value of 3 while the median is 1.
+
+There a 30 error found in the Jshint validator, for example - let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+All the issue relate to 
 
 
 https://stackoverflow.com/questions/684672/how-do-i-loop-through-or-enumerate-a-javascript-object?noredirect=1&lq=1
